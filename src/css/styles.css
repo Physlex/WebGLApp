@@ -6,11 +6,15 @@ html * {
 
     box-sizing: border-box;
 
-    --background-color: hsl(292, 100%, 94%);
-    --main-color: hsl(264, 100%, 82%);
-    --hover-color: hsl(263, 46%, 52%);
+    --text-color: hsl(292, 100%, 94%);
+
+    --hover-color: hsl(263, 72%, 72%);
     --border-color: hsl(263, 55%, 60%);
-    --text-color: hsl(282, 100%, 5%);
+    
+    --background-color: hsl(287, 100%, 6%);
+    --viewport-color: hsl(279, 96%, 9%);
+
+    font-size: xx-large;
 }
 
 /* Default fonts */
@@ -28,7 +32,6 @@ body > .main {
 /* Nav content styles */
 body .main > div[class="nav-wrapper"] {
     background-color: var(--main-color);
-    border-bottom: solid var(--border-color);
     display: sticky;
 }
 
@@ -36,9 +39,12 @@ body .main nav[class="nav-content"] {
     padding: 20px 0 20px 0;
 }
 
+/* Nav buttons and hover */
 body .main nav[class="nav-content"] a[href] {
     padding: 20px;
     color: var(--text-color);
+    font-family: monospace;
+    border-bottom: solid var(--border-color);
     text-decoration: none;
 }
 
@@ -48,16 +54,20 @@ body .main nav[class="nav-content"] a[href]:hover {
     color: var(--background-color);
 }
 
-/* Main content styles */
+/* Viewport wrapper */
 body .main div[class="viewport-wrapper"] {
-    margin: 5vh 43vw 0 10vw;
-    padding: 1em;
-    background-color: var(--main-color);
-    border-radius: 10px;
-    border: solid var(--border-color);
+    background-color: var(--viewport-color);
+    height: 90vh;
 }
 
-/* Styling for the primary graphics viewport */
-body .main div[class="viewport-content"] > * {
-    margin-bottom: 10px;
+/* Viewport content */
+body .main div[class="viewport-content"] {
+    /* border: solid red; */
+    height: inherit;
+}
+
+/* Viewport canvas */
+body .main canvas[class="viewport-canvas"] {
+    height: 100%;
+    width: 100%;
 }
