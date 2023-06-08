@@ -1,0 +1,63 @@
+/* Reset margins and paddings */
+html * {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+
+    box-sizing: border-box;
+
+    --background-color: hsl(292, 100%, 94%);
+    --main-color: hsl(264, 100%, 82%);
+    --hover-color: hsl(263, 46%, 52%);
+    --border-color: hsl(263, 55%, 60%);
+    --text-color: hsl(282, 100%, 5%);
+}
+
+/* Default fonts */
+body {font-family: serif;}
+body .date {font-family: monospace; font-size: larger;}
+body :is(h1, h2, h3, h4, h5, h6) {font-family: sans-serif;}
+
+/* Main */
+body > .main {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    height: 100vh;
+}
+
+/* Nav content styles */
+body .main > div[class="nav-wrapper"] {
+    background-color: var(--main-color);
+    border-bottom: solid var(--border-color);
+    display: sticky;
+}
+
+body .main nav[class="nav-content"] {
+    padding: 20px 0 20px 0;
+}
+
+body .main nav[class="nav-content"] a[href] {
+    padding: 20px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+body .main nav[class="nav-content"] a[href]:hover {
+    background: var(--hover-color);
+    border-bottom: solid var(--hover-color);
+    color: var(--background-color);
+}
+
+/* Main content styles */
+body .main div[class="viewport-wrapper"] {
+    margin: 5vh 43vw 0 10vw;
+    padding: 1em;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    border: solid var(--border-color);
+}
+
+/* Styling for the primary graphics viewport */
+body .main div[class="viewport-content"] > * {
+    margin-bottom: 10px;
+}
